@@ -1,0 +1,22 @@
+{
+  "name": "ts-paths-symlink-repro",
+  "version": "0.0.0",
+  "description": "Monorepo root",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walkerburgin/ts-paths-symlink-repro.git"
+  },
+  "author": "Walker Burgin <walkerburgin@gmail.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "~4.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/walkerburgin/ts-paths-symlink-repro/issues"
+  },
+  "homepage": "https://github.com/walkerburgin/ts-paths-symlink-repro#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}

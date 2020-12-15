@@ -1,0 +1,19 @@
+{
+  "name": "foo-app",
+  "version": "0.0.0",
+  "description": "Foo app",
+  "scripts": {
+    "build": "tsc -p src/"
+  },
+  "author": "Walker Burgin <walkerburgin@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+      "@blueprintjs/core": "^1.39.0",
+      "react": "^16.14.0",
+      "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.14.0",
+    "@types/react-dom": "^16.9.10"
+  }
+}
