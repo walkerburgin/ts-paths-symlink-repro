@@ -67,6 +67,8 @@ And here's the compilation error:
 
 ![pnpm error](./img/pnpm.png)
 
+This error is consistent with what you would get if resolved Blueprint's dependencies from the symlinked location instead of the real path in the `node_modules/.pnpm` directory. PNPM is not expected to work with `--preserve-symlinks` (see [here](https://pnpm.js.org/en/limitations#docsNav)) 
+
 Here's what you get if you remove the `"paths"` from `tsconfig.json`: 
 
 ```
@@ -86,6 +88,6 @@ Resolving real path for '/Volumes/git/walkerburgin/ts-paths-repro/packages/foo-a
 ======== Module name '@blueprintjs/core' was successfully resolved to '/Volumes/git/walkerburgin/ts-paths-repro/node_modules/.pnpm/@blueprintjs/core@1.40.0_react-dom@16.14.0+react@16.14.0/node_modules/@blueprintjs/core/dist/esm/index.d.ts' with Package ID '@blueprintjs/core/dist/esm/index.d.ts@1.40.0'. ========
 ```
 
-(No compilation errors).
+(No compilation errors, as expected).
 
-Note that in this case, `@blueprintjs/core` is resolved to the real path in `node_modules/.pnpm` and not the symlinks.
+Note that in this case, `@blueprintjs/core` is resolved to the real path in `node_modules/.pnpm` and not the symlinked location in `foo-app/node_modules/@blueprintjs/core`.
